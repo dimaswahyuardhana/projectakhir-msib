@@ -18,34 +18,34 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //routing landingpage
-Route::get('/',function(){
+Route::get('/', function () {
     return view('landingpage.home');
 });
-Route::get('/home',function(){
+Route::get('/home', function () {
     return view('landingpage.home');
 });
-Route::get('/about',function(){
+Route::get('/about', function () {
     return view('landingpage.about');
 });
-Route::get('/contact',function(){
+Route::get('/contact', function () {
     return view('landingpage.kontak');
 });
-Route::get('/appoinment',function(){
+Route::get('/appoinment', function () {
     return view('landingpage.appoinment');
 });
-Route::get('/info',function(){
+Route::get('/info', function () {
     return view('landingpage.info');
 });
-Route::get('/doctor',function(){
+Route::get('/doctor', function () {
     return view('landingpage.doctor');
 });
-Route::get('/hospital',function(){
+Route::get('/hospital', function () {
     return view('landingpage.hospital');
 });
-Route::get('/obat',function(){
+Route::get('/obat', function () {
     return view('landingpage.obat');
 });
-Route::get('/beli_obat',function(){
+Route::get('/beli_obat', function () {
     return view('landingpage.beli_obat');
 });
 // Route::get('/contact',function(){
@@ -53,3 +53,6 @@ Route::get('/beli_obat',function(){
 // }); 
 //login belum ada
 
+Route::get('/admin', function () {
+    return view('admin.index');
+});
