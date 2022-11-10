@@ -23,7 +23,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="department-img">
-					<img src="{{(images/service/bg-1.jpg)}}" alt="" class="img-fluid">
+					<img src="{{url('images/service/bg-1.jpg')}}" alt="" class="img-fluid">
 				</div>
 			</div>
 		</div>

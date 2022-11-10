@@ -10,13 +10,13 @@
 
 					<ul class="list-inline footer-socials mt-4">
 						<li class="list-inline-item">
-							<a href="https://www.facebook.com/themefisher"><i class="icofont-facebook"></i></a>
+							<a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href="https://twitter.com/themefisher"><i class="icofont-twitter"></i></a>
+							<a href="https://twitter.com/"><i class="icofont-twitter"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href="https://www.pinterest.com/themefisher/"><i class="icofont-linkedin"></i></a>
+							<a href="https://www.pinterest.com/"><i class="icofont-linkedin"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -43,7 +43,7 @@
 					<div class="divider mb-4"></div>
 
 					<ul class="list-unstyled footer-menu lh-35">
-						<li><a href="#!">Terms & Conditions</a></li>
+						<li><a href="#!">Kampus Merdeka</a></li>
 						<li><a href="#!">Privacy Policy</a></li>
 						<li><a href="#!">Company Support </a></li>
 						<li><a href="#!">FAQuestions</a></li>
@@ -80,7 +80,7 @@
 			<div class="row align-items-center justify-content-between">
 				<div class="col-lg-6">
 					<div class="copyright">
-						Copyright &copy; 2021, Designed &amp; Developed by <a href="https://themefisher.com/">Themefisher</a>
+						Copyright &copy; 2021, Designed &amp; Developed by MSIB3 
 					</div>
 				</div>
 				<div class="col-lg-6">

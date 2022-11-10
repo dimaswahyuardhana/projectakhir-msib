@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
+			<a class="navbar-brand" href="{{('/index')}}">
 				<img src="{{url('images/logo.png')}}" alt="" class="img-fluid">
 			</a>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"

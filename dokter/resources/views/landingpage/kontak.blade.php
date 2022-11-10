@@ -6,8 +6,8 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block text-center">
-          <span class="text-white">Contact Us</span>
-          <h1 class="text-capitalize mb-5 text-lg">Get in Touch</h1>
+          <span class="text-white">Kontak </span>
+          <h1 class="text-capitalize mb-5 text-lg">Hubungi Kami</h1>
 
           <!-- <ul class="list-inline breadcumb-nav">
             <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
@@ -26,21 +26,21 @@
       <div class="col-lg-4 col-md-6">
         <div class="contact-block mb-4 mb-lg-0">
           <i class="icofont-live-support"></i>
-          <h5>Call Us</h5>
+          <h5>Telepon </h5>
           +823-4565-13456
         </div>
       </div>
       <div class="col-lg-4 col-md-6">
         <div class="contact-block mb-4 mb-lg-0">
           <i class="icofont-support-faq"></i>
-          <h5>Email Us</h5>
+          <h5>Email </h5>
           contact@mail.com
         </div>
       </div>
       <div class="col-lg-4 col-md-12">
         <div class="contact-block mb-4 mb-lg-0">
           <i class="icofont-location-pin"></i>
-          <h5>Location</h5>
+          <h5>Lokasi</h5>
           North Main Street,Brooklyn Australia
         </div>
       </div>

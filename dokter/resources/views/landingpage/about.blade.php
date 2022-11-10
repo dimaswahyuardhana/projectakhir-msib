@@ -6,8 +6,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="block text-center">
-          <span class="text-white">About Us</span>
-          <h1 class="text-capitalize mb-5 text-lg">About Us</h1>
+          <h1 class="text-capitalize mb-5 text-lg">Tentang Kami</h1>
 
           <!-- <ul class="list-inline breadcumb-nav">
             <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
@@ -26,8 +25,16 @@
 			<div class="col-lg-4">
 				<h2 class="title-color">Personal care for your healthy living</h2>
 			</div>
+			<style>
+				.p{
+					text-align:justify;
+				}
+			</style>
 			<div class="col-lg-8">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, quod laborum alias. Vitae dolorum, officia sit! Saepe ullam facere at, consequatur incidunt, quae esse, quis ut reprehenderit dignissimos, libero delectus.</p>
+				<p class="p">website informasi kesehatan yang memiliki fungsi untuk memberikan informasi tentang kesehatan, 
+					dan memiliki banyak fitur seperti customer dapat bertanya kepada dokter sehingga 
+					customer dapat mengetahui informasi mengenai obat-obatan dan dapat juga membeli obat melalui website ...
+					Selain itu fitur unggulan dari website ... Adalah customer dapat melakukan pendaftaran RS di seluruh Indonesia sehingga lebih mudah dan praktis</p>
 				<img src="{{url('images/about/sign.png')}}" alt="" class="img-fluid">
 			</div>
 		</div>

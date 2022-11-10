@@ -56,3 +56,6 @@ Route::get('/beli_obat', function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
+Route::get('/login', function () {
+    return view('landingpage.login');
+});
