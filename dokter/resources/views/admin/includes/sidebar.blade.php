@@ -74,5 +74,53 @@
                 <div data-i18n="Account Settings">Dokter</div>
             </a>
         </li>
+        <!-- Forms & Tables -->
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-detail"></i>
+                <div data-i18n="Form Layouts">MASTER DATA</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{('/dokter_form')}}" class="menu-link">
+                    <div data-i18n="Vertical Form">FORM DOKTER</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{('/obat_form')}}" class="menu-link">
+                    <div data-i18n="Horizontal Form">FORM OBAT</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{('/user_form')}}" class="menu-link">
+                    <div data-i18n="Horizontal Form">FORM USER</div>
+                  </a>
+                </li>
+              </ul>
+              <li class="menu-header small text-uppercase"></li>
+            <li class="menu-item">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-table"></i>
+                <div data-i18n="Form Layouts">TABLE</div>
+              </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="{{('/tabel_dokter')}}" class="menu-link">
+                    <div data-i18n="Vertical Form">TABEL DOKTER</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{('/tabel_obat')}}" class="menu-link">
+                    <div data-i18n="Horizontal Form">TABEL OBAT</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{('/tabel_user')}}" class="menu-link">
+                    <div data-i18n="Horizontal Form">TABEL USER</div>
+                  </a>
+                </li>
+              </ul>  
+            </li>
     </ul>
 </aside>
