@@ -32,10 +32,9 @@
                                     placeholder="Masukkan Nomor Telephone" />
                             </div>
                         </div>
-                        <div class="row justify-content-end">
-                            <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Send</button>
-                            </div>
+                        <div class="card-footer">
+                            <a href="{{route('dokter.index')}}" class="btn btn-secondary">Back</a>
+                            <button type="submit" class="btn btn-primary float-right">Add Dokter</button>
                         </div>
                     </form>
                 </div>

@@ -61,27 +61,27 @@ Route::get('/admin', function () {
 Route::get('/login', function () {
     return view('landingpage.login');
 });
-Route::get('/dokter_form', function () {
-    return view('admin.dokter_form');
-});
-Route::get('/obat_form', function () {
-    return view('admin.obat_form');
-});
-Route::get('/user_form', function () {
-    return view('admin.user_form');
-});
-Route::get('/tabel_dokter', function () {
-    return view('admin.tabel_dokter');
-});
-Route::get('/tabel_obat', function () {
-    return view('admin.tabel_obat');
-});
-Route::get('/tabel_user', function () {
-    return view('admin.tabel_user');
-});
+// Route::get('/dokter_form', function () {
+//     return view('admin.dokter_form');
+// });
+// Route::get('/obat_form', function () {
+//     return view('admin.obat_form');
+// });
+// Route::get('/user_form', function () {
+//     return view('admin.user_form');
+// });
+// Route::get('/tabel_dokter', function () {
+//     return view('admin.tabel_dokter');
+// });
+// Route::get('/tabel_obat', function () {
+//     return view('admin.tabel_obat');
+// });
+// Route::get('/tabel_user', function () {
+//     return view('admin.tabel_user');
+// });
 
 // controller dokter
-Route::resource('dokter', DokterController::class);
+Route::resource('admin/dokter', DokterController::class);
 
 // controller obat
-Route::resource('obat', ObatController::class);
+Route::resource('admin/obat', ObatController::class);
