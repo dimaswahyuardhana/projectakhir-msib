@@ -14,7 +14,8 @@ class ObatController extends Controller
      */
     public function index()
     {
-        //
+        $obat = Obat::all();
+        return view('admin.obat.index')->with('obat', $obat);
     }
 
     /**
@@ -24,7 +25,7 @@ class ObatController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.obat.create');
     }
 
     /**

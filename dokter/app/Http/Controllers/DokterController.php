@@ -12,9 +12,12 @@ class DokterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $query = new Dokter;
+        $dokter = $query->paginate(3);
+
+        return view('admin.dokter.index')->with('dokter', $dokter);
     }
 
     /**
@@ -24,7 +27,7 @@ class DokterController extends Controller
      */
     public function create()
     {
-        // 
+        return view('admin.dokter.create');
     }
 
     /**
@@ -59,9 +62,9 @@ class DokterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Dokter $dokter)
     {
-        //
+        return view('admin.dokter.show')->with('dokter', $dokter);
     }
 
     /**
@@ -70,10 +73,9 @@ class DokterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Dokter $dokter)
     {
-        $data = Dokter::where('id', $id)->first();
-        return view('', compact('data'));
+        return view('admin.dokter.edit')->with('dokter', $dokter);
     }
 
     /**
