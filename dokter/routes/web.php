@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DokterController;
+use App\Http\Controllers\ObatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -78,3 +80,8 @@ Route::get('/tabel_user', function () {
     return view('admin.tabel_user');
 });
 
+// controller dokter
+Route::resource('dokter', DokterController::class);
+
+// controller obat
+Route::resource('obat', ObatController::class);
