@@ -12,4 +12,10 @@ class Dokter extends Model
     protected $fillable = [
         'nama', 'keahlian', 'no_telp'
     ];
+
+    // Relasi ke resep obat
+    public function resep_obat()
+    {
+        return $this->hasMany(resepObat::class);
+    }
 }

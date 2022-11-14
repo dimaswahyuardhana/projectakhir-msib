@@ -76,27 +76,32 @@
         </li>
         <!-- Forms & Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
-            <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Form Layouts">MASTER DATA</div>
-              </a>
-              <ul class="menu-sub">
+            </a>
+            <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="{{route('dokter.index')}}" class="menu-link">
-                    <div data-i18n="Vertical Form">DOKTER</div>
-                  </a>
+                    <a href="{{ route('dokter.index') }}" class="menu-link">
+                        <div data-i18n="Vertical Form">DOKTER</div>
+                    </a>
                 </li>
                 <li class="menu-item">
-                  <a href="{{route('obat.index')}}" class="menu-link">
-                    <div data-i18n="Horizontal Form">OBAT</div>
-                  </a>
+                    <a href="{{ route('obat.index') }}" class="menu-link">
+                        <div data-i18n="Horizontal Form">OBAT</div>
+                    </a>
                 </li>
                 <li class="menu-item">
-                  <a href="{{('/tabel_user')}}" class="menu-link">
-                    <div data-i18n="Horizontal Form">USER</div>
-                  </a>
+                    <a href="{{ route('admin-resep.index') }}" class="menu-link">
+                        <div data-i18n="Horizontal Form">Resep Obat</div>
+                    </a>
                 </li>
-              </ul>
+                <li class="menu-item">
+                    <a href="{{ '/tabel_user' }}" class="menu-link">
+                        <div data-i18n="Horizontal Form">USER</div>
+                    </a>
+                </li>
+            </ul>
     </ul>
 </aside>

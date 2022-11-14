@@ -53,7 +53,7 @@ class DokterController extends Controller
         ];
 
         Dokter::create($data);
-        return redirect()->to('dokter_form')->with('success', 'Berhasil menambah data dokter');
+        return redirect()->route('dokter.index')->with('success', 'Berhasil menambah data dokter');
     }
 
     /**
@@ -102,7 +102,7 @@ class DokterController extends Controller
         ];
 
         Dokter::where('id', $id)->update($data);
-        return redirect()->route('')->with('success', 'Berhasil menambah data dokter');
+        return redirect()->route('dokter.index')->with('success', 'Berhasil menambah data dokter');
     }
 
     /**
@@ -114,6 +114,6 @@ class DokterController extends Controller
     public function destroy($id)
     {
         Dokter::where('id', $id)->delete();
-        return redirect()->route('')->with('success', 'Berhasil hapus data');
+        return redirect()->route('dokter.index')->with('success', 'Berhasil hapus data');
     }
 }

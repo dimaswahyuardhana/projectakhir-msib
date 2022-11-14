@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dokter;
 use App\Models\Obat;
+use App\Models\resepObat;
 use Illuminate\Http\Request;
 
-class ObatController extends Controller
+class ResepController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,8 @@ class ObatController extends Controller
      */
     public function index()
     {
-        $obat = Obat::all();
-        return view('admin.obat.index')->with('obat', $obat);
+        $resep = resepObat::all();
+        return view('admin.resep.index', compact('resep'));
     }
 
     /**
@@ -25,7 +27,9 @@ class ObatController extends Controller
      */
     public function create()
     {
-        return view('admin.obat.create');
+        $obat = Obat::all();
+        $dokter = Dokter::all();
+        return view('admin.resep.create', compact('obat', 'dokter'));
     }
 
     /**
@@ -38,18 +42,20 @@ class ObatController extends Controller
     {
         $request->validate(
             [
-                'nama_obat' => 'required',
-                'stok' => 'numeric',
+                'keterangan' => 'required',
+                'obat_id' => 'required',
+                'dokter_id' => 'required',
             ]
         );
 
         $data = [
-            'nama_obat' => $request->nama_obat,
-            'stok' => $request->stok
+            'keterangan' => $request->keterangan,
+            'obat_id' => $request->obat_id,
+            'dokter_id' => $request->dokter_id
         ];
 
-        Obat::create($data);
-        return redirect()->route('obat.index')->with('success', 'Berhasil menambah data obat');
+        resepObat::create($data);
+        return redirect()->route('admin-resep.index')->with('success', 'Berhasil mengirim resep obat ke apotik');
     }
 
     /**
@@ -69,9 +75,9 @@ class ObatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Obat $obat)
+    public function edit($id)
     {
-        return view('admin.obat.edit')->with('obat', $obat);
+        //
     }
 
     /**
@@ -83,20 +89,7 @@ class ObatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate(
-            [
-                'nama_obat' => 'required',
-                'stok' => 'required',
-            ]
-        );
-
-        $data = [
-            'nama_obat' => $request->nama_obat,
-            'stok' => $request->stok,
-        ];
-
-        Obat::where('id', $id)->update($data);
-        return redirect()->route('obat.index')->with('success', 'Berhasil update data dokter');
+        //
     }
 
     /**
@@ -107,7 +100,6 @@ class ObatController extends Controller
      */
     public function destroy($id)
     {
-        Obat::where('id', $id)->delete();
-        return redirect()->route('obat.index')->with('success', 'Berhasil hapus data');
+        //
     }
 }

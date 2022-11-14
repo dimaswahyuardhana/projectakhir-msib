@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\ResepController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -85,3 +86,6 @@ Route::resource('admin/dokter', DokterController::class);
 
 // controller obat
 Route::resource('admin/obat', ObatController::class);
+
+// controller resep
+Route::resource('admin-resep', ResepController::class);
