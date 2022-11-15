@@ -18,7 +18,7 @@
                     <small class="text-muted float-end">Default label</small>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('dokter.store') }}">
+                    <form method="POST" action="{{ route('dokter.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Nama</label>
@@ -39,6 +39,12 @@
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" name="no_telp"
                                     placeholder="Masukkan Nomor Telephone" value="{{ old('no_telp') }}" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Foto</label>
+                            <div class="col-sm-10">
+                                <input name="image" type="file" class="form-control">
                             </div>
                         </div>
                         <div class="card-footer">
