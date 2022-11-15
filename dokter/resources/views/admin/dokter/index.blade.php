@@ -24,6 +24,7 @@
                                 <th>NAMA DOKTER</th>
                                 <th>SPESIALIS</th>
                                 <th>NOMOR TELEPHONE</th>
+                                <th>FOTO</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -34,6 +35,13 @@
                                     <td>{{ $dokters->nama }}</td>
                                     <td>{{ $dokters->keahlian }}</td>
                                     <td>{{ $dokters->no_telp }}</td>
+                                    <td>
+                                        @if ($dokters->image != null)
+                                        <img src="{{asset('storage/'. $dokters->image)}}" width="200px" alt="Foto_Dokter-.{{$dokters->id}}">                              
+                                        @else
+                                        <p>Tidak ada Foto</p>
+                                        @endif
+                                    </td>
                                     <td style="width: 100px">
                                         <form action="{{ route('dokter.destroy', ['dokter' => $dokters->id]) }}"
                                             method="post">
