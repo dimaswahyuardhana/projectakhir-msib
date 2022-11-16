@@ -80,9 +80,8 @@ class ResepController extends Controller
     {
         $resep = resepObat::find($id);
         $obat = Obat::all();
-        $dokter = Dokter::all();
-        // dd($obat);
-        return view('admin.resep.edit', compact('resep', 'obat', 'dokter'));
+        $dokters = Dokter::all();
+        return view('admin.resep.edit', compact('resep', 'obat', 'dokters'));
     }
 
     /**
@@ -107,7 +106,6 @@ class ResepController extends Controller
             'obat_id' => $request->obat_id,
             'dokter_id' => $request->dokter_id
         ];
-
         resepObat::where('id', $id)->update($data);
         return redirect()->route('admin-resep.index')->with('success', 'Berhasil mengirim update resep obat');
     }

@@ -25,7 +25,7 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Obat</label>
                             <div class="col-sm-10">
                                 <select name="obat_id" id="" class="form-control">
-                                    <option selected>{{ $resep->obat->nama_obat }}</option>
+                                    <option value="{{ $resep->obat->id }}" selected>{{ $resep->obat->nama_obat }}</option>
                                     @foreach ($obat as $item)
                                         <option value="{{ $item->id }}">{{ $item->nama_obat }}</option>
                                     @endforeach
@@ -39,9 +39,9 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Dokter</label>
                             <div class="col-sm-10">
                                 <select name="dokter_id" id="" class="form-control">
-                                    <option selected>{{ $resep->dokter->nama }}</option>
-                                    @foreach ($dokter as $item)
-                                        <option value="{{ $item->id }}">{{ $item->nama }}</option>
+                                    <option value="{{ $resep->dokter->id }}" selected>{{ $resep->dokter->nama }}</option>
+                                    @foreach ($dokters as $dokter)
+                                        <option value="{{ $dokter->id }}">{{ $dokter->nama }}</option>
                                     @endforeach
                                 </select>
                                 @error('dokter_id')
