@@ -18,7 +18,6 @@
                     <thead>
                         <tr>
                             <th>NO</th>
-                            {{-- <th>Nama Pasien</th> --}}
                             <th>Keterangan</th>
                             <th>Obat</th>
                             <th>Dokter</th>
@@ -26,20 +25,18 @@
                         </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                        @foreach ($resep as $resep)
+                        @forelse ($resep as $data)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                {{-- <td>{{ $resep->user->name }}</td> --}}
-                                <td>{{ $resep->keterangan }}</td>
-                                <td>{{ $resep->obat->nama_obat }}</td>
-                                <td>{{ $resep->dokter->nama }}</td>
+                                <td>{{ $data->keterangan }}</td>
+                                <td>{{ $data->obat->nama_obat }}</td>
+                                <td>{{ $data->dokter->nama }}</td>
                                 <td style="width: 100px">
-                                    <form action="{{ route('obat.destroy', ['obat' => $resep->id]) }}" method="post">
+                                    <form action="{{ route('admin-resep.destroy', $data->id) }}" method="post">
                                         @method('delete')
                                         @csrf
                                         <div class="btn-group">
-                                            <a href="{{ route('obat.edit', ['obat' => $resep->id]) }}"
-                                                class="btn btn-warning">
+                                            <a href="{{ route('admin-resep.edit', $data->id) }}" class="btn btn-warning">
                                                 <i class="fas fa-pen"></i>
                                             </a>
                                             <button type="submit" class="btn btn-danger"
@@ -50,7 +47,11 @@
                                     </form>
                                 </td>
                             </tr>
-                        @endforeach
+                        @empty
+                            <tr>
+                                <td colspan="5" class="text-center">Data Kosong</td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

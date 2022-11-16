@@ -17,6 +17,7 @@ class ResepController extends Controller
     public function index()
     {
         $resep = resepObat::all();
+        // dd($resep);
         return view('admin.resep.index', compact('resep'));
     }
 
@@ -100,6 +101,7 @@ class ResepController extends Controller
      */
     public function destroy($id)
     {
-        //
+        resepObat::where('id', $id)->delete();
+        return redirect()->route('admin-resep.index')->with('success', 'Berhasil hapus data');
     }
 }
