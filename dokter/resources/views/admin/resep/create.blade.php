@@ -31,8 +31,8 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Obat</label>
                             <div class="col-sm-10">
                                 <select name="obat_id" id="" class="form-control">
+                                    <option disabled selected>-- Pilih Obat --</option>
                                     @foreach ($obat as $obat)
-                                        <option disabled selected>-- Pilih Obat --</option>
                                         <option value="{{ $obat->id }}">{{ $obat->nama_obat }}</option>
                                     @endforeach
                                 </select>
@@ -43,8 +43,8 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Dokter</label>
                             <div class="col-sm-10">
                                 <select name="dokter_id" id="" class="form-control">
+                                    <option disabled selected>-- Pilih Obat --</option>
                                     @foreach ($dokter as $dokter)
-                                        <option disabled selected>-- Pilih Obat --</option>
                                         <option value="{{ $dokter->id }}">{{ $dokter->nama }}</option>
                                     @endforeach
                                 </select>

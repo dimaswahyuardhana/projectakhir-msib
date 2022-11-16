@@ -78,7 +78,11 @@ class ResepController extends Controller
      */
     public function edit($id)
     {
-        //
+        $resep = resepObat::find($id);
+        $obat = Obat::all();
+        $dokter = Dokter::all();
+        // dd($obat);
+        return view('admin.resep.edit', compact('resep', 'obat', 'dokter'));
     }
 
     /**
@@ -90,7 +94,22 @@ class ResepController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'keterangan' => 'required',
+                'obat_id' => 'required',
+                'dokter_id' => 'required',
+            ]
+        );
+
+        $data = [
+            'keterangan' => $request->keterangan,
+            'obat_id' => $request->obat_id,
+            'dokter_id' => $request->dokter_id
+        ];
+
+        resepObat::where('id', $id)->update($data);
+        return redirect()->route('admin-resep.index')->with('success', 'Berhasil mengirim update resep obat');
     }
 
     /**
