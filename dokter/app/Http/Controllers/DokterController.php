@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dokter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DokterController extends Controller
 {
@@ -42,17 +43,21 @@ class DokterController extends Controller
             [
                 'nama' => 'required',
                 'keahlian' => 'required',
-                'no_telp' => 'required|numeric'
+                'no_telp' => 'required|numeric',
+                'image' => ['nullable', 'image'],
             ]
         );
 
-        $data = [
-            'nama' => $request->nama,
-            'keahlian' => $request->keahlian,
-            'no_telp' => $request->no_telp,
-        ];
+        $input = $request->all();
 
-        Dokter::create($data);
+        if($request->has('image')){
+            $image = $request->file('image')->store('dokter/img', 'public');
+            $input['image'] = $image;
+        }else{
+            unset($input['image']);
+        }
+
+        Dokter::create($input);
         return redirect()->route('dokter.index')->with('success', 'Berhasil menambah data dokter');
     }
 
@@ -85,25 +90,33 @@ class DokterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Dokter $dokter)
     {
         $request->validate(
             [
                 'nama' => 'required',
                 'keahlian' => 'required',
-                'no_telp' => 'required|numeric'
+                'no_telp' => 'required|numeric',
+                'image' => ['nullable', 'image'],
             ]
         );
 
-        $data = [
-            'nama' => $request->nama,
-            'keahlian' => $request->keahlian,
-            'no_telp' => $request->no_telp,
-        ];
+        $input = $request->all();
+        if($request->has('image')){ 
+            if($dokter->image != null && Storage::disk('public')->exists($dokter->image)){
+            Storage::disk('public')->delete($dokter->image);
+        }
+            $image = $request->file('image')->store('dokter/img', 'public');
+            $input['image'] = $image;
+        }else{
+            $input['image'] = $dokter->image;
+        }
 
-        Dokter::where('id', $id)->update($data);
-        return redirect()->route('dokter.index')->with('success', 'Berhasil menambah data dokter');
+        $dokter->update($input);
+
+        return redirect(route('dokter.index'));
     }
+    
 
     /**
      * Remove the specified resource from storage.

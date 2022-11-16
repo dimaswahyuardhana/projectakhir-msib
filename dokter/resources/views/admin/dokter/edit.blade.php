@@ -8,7 +8,7 @@
                     <h5 class="mb-0">Edit Data Dokter : <b>{{$dokter->nama}}</b></h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('dokter.update', ['dokter'=> $dokter->id])}}" method="post">
+                    <form action="{{route('dokter.update', ['dokter'=> $dokter->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <div class="row mb-3">
@@ -33,6 +33,12 @@
                             <div class="col-sm-10">
                                 <input type="number" class="form-control" name="no_telp" value="{{$dokter->no_telp}}"
                                     placeholder="Masukkan Nomor Telephone" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Foto</label>
+                            <div class="col-sm-10">
+                                <input name="image" type="file" class="form-control">
                             </div>
                         </div>
                         <div class="card-footer">

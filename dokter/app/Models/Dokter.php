@@ -10,7 +10,7 @@ class Dokter extends Model
     use HasFactory;
     protected $table = "dokter";
     protected $fillable = [
-        'nama', 'keahlian', 'no_telp'
+        'nama', 'keahlian', 'no_telp', 'image'
     ];
 
     // Relasi ke resep obat
