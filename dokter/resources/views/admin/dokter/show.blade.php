@@ -8,6 +8,11 @@
                     <h5 class="mb-0">Detail Dokter</h5>
                 </div>
                 <div class="card-body">
+                        @if ($dokter->image != null)
+                        <center><img src="{{asset('storage/'. $dokter->image)}}" width="15%" alt="Foto_Dokter-.{{$dokter->id}}"></center><br>                              
+                        @else
+                        <p>Tidak ada Foto</p>
+                        @endif
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Nama</label>
                             <div class="col-sm-10">

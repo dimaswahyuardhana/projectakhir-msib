@@ -37,7 +37,7 @@
                                     <td>{{ $dokters->no_telp }}</td>
                                     <td>
                                         @if ($dokters->image != null)
-                                        <img src="{{asset('storage/'. $dokters->image)}}" width="200px" alt="Foto_Dokter-.{{$dokters->id}}">                              
+                                        <img src="{{asset('storage/'. $dokters->image)}}" width="25%" alt="Foto_Dokter-.{{$dokters->id}}">                              
                                         @else
                                         <p>Tidak ada Foto</p>
                                         @endif
