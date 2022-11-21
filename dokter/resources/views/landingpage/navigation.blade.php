@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navigation" id="navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{{('/index')}}">
-				<img src="{{url('images/logo.png')}}" alt="" class="img-fluid">
+			<a class="navbar-brand" href="{{('/home')}}">
+				<img src="{{url('images/logobaru.png')}}" alt="" class="img-fluid">
 			</a>
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
 				aria-controls="navbarmain" aria-expanded="false" aria-label="Toggle navigation">
