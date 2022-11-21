@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dokter;
 use App\Models\Obat;
+use App\Models\Dokter;
 use App\Models\resepObat;
 use Illuminate\Http\Request;
+use PDF;
 
 class ResepController extends Controller
 {
@@ -120,5 +121,12 @@ class ResepController extends Controller
     {
         resepObat::where('id', $id)->delete();
         return redirect()->route('admin-resep.index')->with('success', 'Berhasil hapus data');
+    }
+
+    public function exportPdf()
+    {
+        $resep = resepObat::all();
+        $pdf = PDF::loadview('admin.resep.cetak-pdf', compact('resep'));
+        return $pdf->stream('coba.pdf');
     }
 }

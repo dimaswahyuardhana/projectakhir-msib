@@ -89,3 +89,4 @@ Route::resource('admin/obat', ObatController::class);
 
 // controller resep
 Route::resource('admin-resep', ResepController::class);
+Route::get('/resep-cetak-pdf', [ResepController::class, 'exportPdf'])->name('resep-pdf');

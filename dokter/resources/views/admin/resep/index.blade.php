@@ -13,8 +13,14 @@
                     <a href="{{ route('admin-resep.create') }}" class="btn btn-tool">
                         <i class="fas fa-plus"></i> Add
                     </a>
+                    <a href="{{ route('resep-pdf') }}" class="btn btn-tool">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
+                    <a href="{{ route('resep-pdf') }}" target="_blank" class="btn btn-tool">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </a>
                 </div>
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>NO</th>
