@@ -23,7 +23,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
-				<h2 class="title-color">Personal care for your healthy living</h2>
+				<img src="{{url('images/logobaru.png')}}" alt="" class="img-fluid w-100">
 			</div>
 			<style>
 				.p{
@@ -31,92 +31,54 @@
 				}
 			</style>
 			<div class="col-lg-8">
-				<p class="p">website informasi kesehatan yang memiliki fungsi untuk memberikan informasi tentang kesehatan, 
+				<p class="p">Yuk Sehat merupakan website informasi kesehatan yang memiliki fungsi untuk memberikan informasi tentang kesehatan, 
 					dan memiliki banyak fitur seperti customer dapat bertanya kepada dokter sehingga 
-					customer dapat mengetahui informasi mengenai obat-obatan dan dapat juga membeli obat melalui website ...
-					Selain itu fitur unggulan dari website ... Adalah customer dapat melakukan pendaftaran RS di seluruh Indonesia sehingga lebih mudah dan praktis</p>
-				<img src="{{url('images/about/sign.png')}}" alt="" class="img-fluid">
+					customer dapat mengetahui informasi mengenai obat-obatan dan dapat juga membeli obat.
+					Selain itu fitur unggulan dari website Yuk Sehat adalah customer dapat melakukan pendaftaran RS di seluruh Indonesia sehingga lebih mudah dan praktis</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="fetaure-page ">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6">
-				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{url('images/about/about-1.jpg')}}" alt="" class="img-fluid w-100">
-					<h4 class="mt-3">Healthcare for Kids</h4>
-					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
+<div class="container">
+	<div class="row align-items-center">
+		
+		<div class="col-lg-8">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="about-block-item mb-5 mb-lg-0">
+						<img src="{{url('images/about/chat.jpg')}}" alt="" class="img-fluid w-100">
+						<h4 class="mt-3">Chat Dokter</h4>
+						<p>Hubungi Dokter kapan dan dimana saja jika Anda mengalami gangguan masalah kesehatan.</p>
+					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{url('images/about/about-2.jpg')}}" alt="" class="img-fluid w-100">
-					<h4 class="mt-3">Medical Counseling</h4>
-					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
+				<div class="col-lg-6 col-md-6">
+					<div class="about-block-item mb-5 mb-lg-0">
+						<img src="{{url('images/about/rs.jpg')}}" alt="" class="img-fluid w-100">
+						<h4 class="mt-3">Check-In Rumah Sakit</h4>
+						<p>Lakukan reservasi secara online di Rumah Sakit terdekat di kota Anda.</p>
+					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="about-block-item mb-5 mb-lg-0">
-					<img src="{{url('images/about/about-3.jpg')}}" alt="" class="img-fluid w-100">
-					<h4 class="mt-3">Modern Equipments</h4>
-					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
+				<div class="col-lg-6 col-md-6">
+					<div class="about-block-item mb-5 mb-lg-0">
+						<img src="{{url('images/about/kesehatan.jpg')}}" alt="" class="img-fluid w-100">
+						<h4 class="mt-3">Informasi Kesehatan</h4>
+						<p>Berbagai informasi kesehatan yang dapat meningkatkan wawasan akan kesehatan.</p>
+					</div>
 				</div>
-			</div>
-			<div class="col-lg-3 col-md-6">
-				<div class="about-block-item">
-					<img src="{{url('images/about/about-4.jpg')}}" alt="" class="img-fluid w-100">
-					<h4 class="mt-3">Qualified Doctors</h4>
-					<p>Voluptate aperiam esse possimus maxime repellendus, nihil quod accusantium .</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="section awards">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-lg-4">
-				<h2 class="title-color">Our Doctors achievements </h2>
-				<div class="divider mt-4 mb-5 mb-lg-0"></div>
-			</div>
-			<div class="col-lg-8">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/3.png')}}" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/4.png')}}" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/1.png')}}" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/2.png')}}" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/5.png')}}" alt="" class="img-fluid">
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 col-sm-6">
-						<div class="award-img">
-							<img src="{{url('images/about/6.png')}}" alt="" class="img-fluid">
-						</div>
+				<div class="col-lg-6 col-md-6">
+					<div class="about-block-item">
+						<img src="{{url('images/about/obat.jpg')}}" alt="" class="img-fluid w-100">
+						<h4 class="mt-3">Informasi Obat-Obatan</h4>
+						<p>Berbagai informasi obat-obatan yang dapat meningkatkan wawasan akan kesehatan.</p>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="col-lg-4">
+			<h2 class="title-color">Fitur Yuk Sehat</h2>
+			<div class="divider mt-4 mb-5 mb-lg-0"></div>
+		</div>
 	</div>
-</section>
+</div>
 @endsection

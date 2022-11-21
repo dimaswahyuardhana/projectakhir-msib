@@ -39,6 +39,9 @@ Route::get('/appoinment', function () {
 Route::get('/info', function () {
     return view('landingpage.info');
 });
+Route::get('/info_detail', function () {
+    return view('landingpage.info_detail');
+});
 Route::get('/doctor', function () {
     return view('landingpage.doctor');
 });
