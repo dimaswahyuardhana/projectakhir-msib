@@ -51,12 +51,15 @@ Route::get('/hospital', function () {
 Route::get('/obat', function () {
     return view('landingpage.obat');
 });
+Route::get('/detail_obat', function () {
+    return view('landingpage.detail_obat');
+});
 Route::get('/beli_obat', function () {
     return view('landingpage.beli_obat');
 });
 // Route::get('/contact',function(){
 //     return view('landingpage.login');
-// }); 
+// });
 //login belum ada
 
 Route::get('/admin', function () {
