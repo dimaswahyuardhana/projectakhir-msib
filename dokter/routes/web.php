@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\ResepController;
@@ -59,9 +60,7 @@ Route::get('/beli_obat', function () {
 // }); 
 //login belum ada
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/login', function () {
     return view('landingpage.login');
 });
