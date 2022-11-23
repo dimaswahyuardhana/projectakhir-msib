@@ -74,12 +74,6 @@
                 <input name="alamat" id="alamat" type="text" class="form-control" placeholder="Alamat" required>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="form-group">
-                <input name="apotek" id="apotek" type="text" class="form-control" placeholder="Nama Apotek" required>
-              </div>
-            </div>
-           
           </div>
 
           <div class="form-group-2 mb-4">
@@ -94,7 +88,4 @@
     </div>
   </div>
 </section>
-<div class="google-map ">
-	<div id="map" data-latitude="40.712776" data-longitude="-74.005974" data-marker="{{url('images/marker.png')}}"></div>
-</div>
 @endsection
