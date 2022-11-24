@@ -91,6 +91,7 @@ Route::resource('admin/dokter', DokterController::class);
 
 // controller obat
 Route::resource('admin/obat', ObatController::class);
+Route::get('/downloadExcel', [ObatController::class, 'exportExcel'])->name('download-excel');
 
 // controller resep
 Route::resource('admin-resep', ResepController::class);

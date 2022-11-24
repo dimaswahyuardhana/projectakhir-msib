@@ -10,7 +10,7 @@ class resepObat extends Model
     use HasFactory;
     protected $table = "resep_obats";
     protected $fillable = [
-        'keterangan', 'obat_id', 'dokter_id'
+        'keterangan', 'obat_id', 'dokter_id', 'status'
     ];
 
     // relasi ke dokter

@@ -53,7 +53,8 @@ class ResepController extends Controller
         $data = [
             'keterangan' => $request->keterangan,
             'obat_id' => $request->obat_id,
-            'dokter_id' => $request->dokter_id
+            'dokter_id' => $request->dokter_id,
+            'status' => $request->status
         ];
 
         resepObat::create($data);
@@ -105,7 +106,8 @@ class ResepController extends Controller
         $data = [
             'keterangan' => $request->keterangan,
             'obat_id' => $request->obat_id,
-            'dokter_id' => $request->dokter_id
+            'dokter_id' => $request->dokter_id,
+            'status' => $request->status
         ];
         resepObat::where('id', $id)->update($data);
         return redirect()->route('admin-resep.index')->with('success', 'Berhasil mengirim update resep obat');

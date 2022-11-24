@@ -27,6 +27,7 @@
                             <th>Keterangan</th>
                             <th>Obat</th>
                             <th>Dokter</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -37,6 +38,7 @@
                                 <td>{{ $data->keterangan }}</td>
                                 <td>{{ $data->obat->nama_obat }}</td>
                                 <td>{{ $data->dokter->nama }}</td>
+                                <td>{{ $data->status }}</td>
                                 <td style="width: 100px">
                                     <form action="{{ route('admin-resep.destroy', $data->id) }}" method="post">
                                         @method('delete')

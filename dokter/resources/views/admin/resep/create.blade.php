@@ -49,7 +49,16 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Status</label>
+                            <div class="col-sm-10">
+                                <select name="status" id="" class="form-control">
+                                    <option disabled selected>-- Pilih Obat --</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Ditebus">Ditebus</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-footer">
                             <a href="{{ route('admin-resep.index') }}" class="btn btn-secondary">Back</a>

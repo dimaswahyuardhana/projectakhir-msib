@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\ExportObat;
 use App\Models\Obat;
 use Illuminate\Http\Request;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ObatController extends Controller
 {
@@ -109,5 +111,10 @@ class ObatController extends Controller
     {
         Obat::where('id', $id)->delete();
         return redirect()->route('obat.index')->with('success', 'Berhasil hapus data');
+    }
+
+    public function exportExcel(Request $request)
+    {
+        return Excel::download(new ExportObat, 'obat.xlsx');
     }
 }

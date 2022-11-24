@@ -49,6 +49,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Status</label>
+                            <div class="col-sm-10">
+                                <select name="status" id="" class="form-control">
+                                    <option selected>{{ $resep->status }}</option>
+                                    <option value="Pending">Pending</option>
+                                    <option value="Ditebus">Ditebus</option>
+                                </select>
+                                @error('status')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
                         <div class="card-footer">
                             <a href="{{ route('admin-resep.index') }}" class="btn btn-secondary">Back</a>
                             <button type="submit" class="btn btn-primary float-right">Edit Data</button>
