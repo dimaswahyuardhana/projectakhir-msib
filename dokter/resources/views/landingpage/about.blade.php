@@ -31,8 +31,8 @@
 				}
 			</style>
 			<div class="col-lg-8">
-				<p class="p">Yuk Sehat merupakan website informasi kesehatan yang memiliki fungsi untuk memberikan informasi tentang kesehatan, 
-					dan memiliki banyak fitur seperti customer dapat bertanya kepada dokter sehingga 
+				<p class="p">Yuk Sehat merupakan website informasi kesehatan yang memiliki fungsi untuk memberikan informasi tentang kesehatan,
+					dan memiliki banyak fitur seperti customer dapat bertanya kepada dokter sehingga
 					customer dapat mengetahui informasi mengenai obat-obatan dan dapat juga membeli obat.
 					Selain itu fitur unggulan dari website Yuk Sehat adalah customer dapat melakukan pendaftaran RS di seluruh Indonesia sehingga lebih mudah dan praktis</p>
 			</div>
@@ -42,7 +42,7 @@
 
 <div class="container">
 	<div class="row align-items-center">
-		
+
 		<div class="col-lg-8">
 			<div class="row">
 				<div class="col-lg-6 col-md-6">

@@ -34,6 +34,12 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('landingpage.kontak');
 });
+Route::get('/detail_produk', function(){
+    return view('landingpage.detail_produk');
+});
+Route::get('/detail_obat', function () {
+    return view('landingpage.detail_obat');
+});
 Route::get('/appoinment', function () {
     return view('landingpage.appoinment');
 });
@@ -51,9 +57,6 @@ Route::get('/hospital', function () {
 });
 Route::get('/obat', function () {
     return view('landingpage.obat');
-});
-Route::get('/detail_obat', function () {
-    return view('landingpage.detail_obat');
 });
 Route::get('/beli_obat', function () {
     return view('landingpage.beli_obat');

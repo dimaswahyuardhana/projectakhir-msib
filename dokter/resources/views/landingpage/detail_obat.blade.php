@@ -24,7 +24,7 @@
                     perspiciatis voluptates quaerat tempore impedit aperiam et, quis accusantium reprehenderit iusto
                     commodi. Repudiandae, vel magni.</p>
                     <h3>RP. 10.000,00</h3>
-                    <a href="{{url('/beli_obat')}}" class="btn btn-success">BELI OBAT</a>
+                    <a href="{{url('/detail_produk')}}" class="btn btn-success">BELI OBAT</a>
             </div>
         </div>
     </div>
