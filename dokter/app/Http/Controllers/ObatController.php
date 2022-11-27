@@ -98,7 +98,7 @@ class ObatController extends Controller
         ];
 
         Obat::where('id', $id)->update($data);
-        return redirect()->route('obat.index')->with('success', 'Berhasil update data dokter');
+        return redirect()->route('obat.index')->with('toast_success', 'Berhasil update data dokter');
     }
 
     /**

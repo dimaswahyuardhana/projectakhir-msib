@@ -3,11 +3,11 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <h5 class="card-header">Resep Dokter</h5>
-            @if (Session::has('success'))
+            {{-- @if (Session::has('success'))
                 <div class="alert alert-success">
                     {{ Session::get('success') }}
                 </div>
-            @endif
+            @endif --}}
             <div class="table-responsive text-nowrap">
                 <div class="card-tools">
                     <a href="{{ route('admin-resep.create') }}" class="btn btn-tool">

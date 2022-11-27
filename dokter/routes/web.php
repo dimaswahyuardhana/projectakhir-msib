@@ -22,10 +22,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //routing landingpage
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 Route::get('/', function () {
-    return view('landingpage.home');
-});
-Route::get('/home', function () {
     return view('landingpage.home');
 });
 Route::get('/about', function () {
@@ -34,7 +34,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('landingpage.kontak');
 });
-Route::get('/detail_produk', function(){
+Route::get('/detail_produk', function () {
     return view('landingpage.detail_produk');
 });
 Route::get('/detail_obat', function () {
@@ -66,36 +66,27 @@ Route::get('/beli_obat', function () {
 // });
 //login belum ada
 
-Route::get('/admin', [DashboardController::class, 'index'])->name('dashboard');
+
 Route::get('/login', function () {
     return view('landingpage.login');
 });
-// Route::get('/dokter_form', function () {
-//     return view('admin.dokter_form');
-// });
-// Route::get('/obat_form', function () {
-//     return view('admin.obat_form');
-// });
-// Route::get('/user_form', function () {
-//     return view('admin.user_form');
-// });
-// Route::get('/tabel_dokter', function () {
-//     return view('admin.tabel_dokter');
-// });
-// Route::get('/tabel_obat', function () {
-//     return view('admin.tabel_obat');
-// });
-// Route::get('/tabel_user', function () {
-//     return view('admin.tabel_user');
-// });
 
-// controller dokter
-Route::resource('admin/dokter', DokterController::class);
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    // controller dokter
+    Route::resource('admin/dokter', DokterController::class);
 
-// controller obat
-Route::resource('admin/obat', ObatController::class);
-Route::get('/downloadExcel', [ObatController::class, 'exportExcel'])->name('download-excel');
+    // controller obat
+    Route::resource('admin/obat', ObatController::class);
+    Route::get('/downloadExcel', [ObatController::class, 'exportExcel'])->name('download-excel');
 
-// controller resep
-Route::resource('admin-resep', ResepController::class);
-Route::get('/resep-cetak-pdf', [ResepController::class, 'exportPdf'])->name('resep-pdf');
+    // controller resep
+    Route::resource('admin-resep', ResepController::class);
+    Route::get('/resep-cetak-pdf', [ResepController::class, 'exportPdf'])->name('resep-pdf');
+});
+
+
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

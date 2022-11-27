@@ -3,11 +3,11 @@
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <h5 class="card-header">Table Dokter</h5>
-            @if (Session::has('success'))
+            {{-- @if (Session::has('success'))
                 <div class="alert alert-success">
                     {{ Session::get('success') }}
                 </div>
-            @endif
+            @endif --}}
             <div class="table-responsive text-nowrap">
                 <div class="card-tools">
                     <a href="{{ route('dokter.create') }}" class="btn btn-tool">
@@ -15,8 +15,6 @@
                     </a>
                 </div>
                 <div class="card-body">
-
-
                     <table class="table">
                         <thead>
                             <tr>
@@ -37,9 +35,10 @@
                                     <td>{{ $dokters->no_telp }}</td>
                                     <td>
                                         @if ($dokters->image != null)
-                                        <img src="{{asset('storage/'. $dokters->image)}}" width="25%" alt="Foto_Dokter-.{{$dokters->id}}">                              
+                                            <img src="{{ asset('storage/' . $dokters->image) }}" width="50px"
+                                                alt="Foto_Dokter-.{{ $dokters->id }}">
                                         @else
-                                        <p>Tidak ada Foto</p>
+                                            <p>Tidak ada Foto</p>
                                         @endif
                                     </td>
                                     <td style="width: 100px">
