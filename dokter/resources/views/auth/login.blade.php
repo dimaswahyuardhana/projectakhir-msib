@@ -72,7 +72,7 @@
 </div>
 @endsection --}}
 
-@extends('layouts.app')
+@extends('landingpage.index')
 @push('css-auth')
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
@@ -150,10 +150,3 @@
         </div>
     </section>
 @endsection
-
-@push('js-auth')
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-@endpush
