@@ -29,7 +29,7 @@
 						<span>24 Jam Pelayanan</span>
 						<h4 class="mb-3">Chat Dokter</h4>
 						<p class="mb-4">Konsultasikan permasalahan kesehatan anda dengan chat 24 jam kepada dokter terbaik dari YUK SEHAT</p>
-						<a class="btn btn-danger" href="{{('/doctor')}}">Chat Dokter</a>
+						<a class="btn btn-danger" href="{{url('/doctor')}}">Chat Dokter</a>
 
 					</div>
 					<div class="feature-item mb-5 mb-lg-0">
@@ -39,7 +39,7 @@
 						<span>Layanan Check-In Rumah Sakit</span>
 						<h4 class="mb-3">Check-In Rumah Sakit</h4>
 						<p class="mb-4">Daftarkan diri anda ke rumah sakit dengan layanan Check-In Rumah Sakit dari YUK SEHAT</p>
-						<a class="btn btn-danger" href="{{('/appoinment')}}">Check-In Rumah Sakit</a>
+						<a class="btn btn-danger" href="{{url('/appoinment')}}">Check-In Rumah Sakit</a>
 					</div>
 					<div class="feature-item mb-5 mb-lg-0">
 						<div class="feature-icon mb-4">
@@ -48,7 +48,7 @@
 						<span>Layanan Pesan Obat</span>
 						<h4 class="mb-3">Pesan Obat</h4>
 						<p>Kini anda lebih mudah pesan obat yang anda inginkan, tentunya terpercaya dan aman ya hanya di YUK SEHAT</p>
-						<a class="btn btn-danger" href="{{('/obat')}}">Pesan Obat</a>
+						<a class="btn btn-danger" href="{{url('/obat')}}">Pesan Obat</a>
 					</div>
 				</div>
 			</div>
