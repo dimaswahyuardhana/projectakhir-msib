@@ -26,9 +26,17 @@
                 @auth
                     <form action="{{ route('logout') }}" method="POST" class="form-inline my-2 my-lg-0 d-none d-md-block">
                         @csrf
-                        <li class="nav-item">
-                            {{-- <a class="nav-link" href="{{ route('logout') }}}">LogOut</a> --}}
-                            <button type="submit" class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">Log Out</button>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Hai, {{ Auth::user()->name }}<i
+                                    class="icofont-thin-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                                <li>
+                                    <button type="submit"
+                                        class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">LogOut</button>
+                                </li>
+                            </ul>
+
                         </li>
                     </form>
                 @endauth
