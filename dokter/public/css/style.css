@@ -1425,4 +1425,10 @@ a:focus {
   cursor: pointer;
   opacity: 1;
 }
+.ngezoom:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+  }
+
+  a:link { text-decoration: none; }
 /*# sourceMappingURL=style.css.map */

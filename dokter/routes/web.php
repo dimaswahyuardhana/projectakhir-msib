@@ -58,6 +58,9 @@ Route::get('/doctor', function () {
 Route::get('/hospital', function () {
     return view('landingpage.hospital');
 });
+Route::get('/daftar_rs', function () {
+    return view('landingpage.daftar_rs');
+});
 Route::get('/obat', function () {
     return view('landingpage.obat');
 });

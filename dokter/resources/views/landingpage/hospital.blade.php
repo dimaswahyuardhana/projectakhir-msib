@@ -1,33 +1,25 @@
 @extends('landingpage.index')
 @section('content')
-<section class="page-title bg-1">
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="block text-center">
-          <span class="text-white">Department Details</span>
-          <h1 class="text-capitalize mb-5 text-lg">Single Department</h1>
-          <!-- <ul class="list-inline breadcumb-nav">
-            <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-            <li class="list-inline-item"><span class="text-white">/</span></li>
-            <li class="list-inline-item"><a href="#" class="text-white-50">Department Details</a></li>
-          </ul> -->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section department-single">
+
+<section class="section doctor-single">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="department-img">
-					<img src="{{url('images/service/bg-1.jpg')}}" alt="" class="img-fluid">
+			<div class="col-lg-4 col-md-6">
+				<div class="doctor-img-block">
+					<img src="images/service/adammalik.jpg" alt="" class="img-fluid w-100">
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-6">
+				<div class="doctor-details mt-4 mt-lg-0">
+					<h2 class="text-md">RSUP H. Adam Malik</h2>
+					<div class="divider my-4"></div>
+					<p>Rumah Sakit Umum Pusat H. Adam Malik Medan merupakan Rumah Sakit Umum Kelas A yang berdiri pada tanggal 21 Juli 1993, dikelola oleh Pemerintah Provinsi Sumatera Utara. Rumah Sakit Umum Pusat H. Adam Malik memiliki Visi menjadi Rumah Sakit Pendidikan dan Pusat Rujukan Nasional yang terbaik dan bermutu. Dengan Misi memiliki pendidikan, pelayanan yang bermutu, meningkatkan sumber daya manusia, dan mengampu rumah sakit jejaring dan rumah sakit di Wilayah Sumatera.</p>
+					<a href="{{('/appoinment')}}" class="btn btn-danger btn-round-full mt-3">Check-In Sekarang<i
+							class="icofont-simple-right ml-2  "></i></a>
 				</div>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="department-content mt-5">
@@ -37,7 +29,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum recusandae dolor autem laudantium, quaerat vel dignissimos. Magnam sint suscipit omnis eaque unde eos aliquam distinctio, quisquam iste, itaque possimus . Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet alias modi eaque, ratione recusandae cupiditate dolorum repellendus iure eius rerum hic minus ipsa at, corporis nesciunt tempore vero voluptas. Tempore.</p>
 
 
-					<h3 class="mt-5 mb-4">Services features</h3>
+					<h3 class="mt-5 mb-4">Fasilitas</h3>
 					<div class="divider my-4"></div>
 					<ul class="list-unstyled department-service">
 						<li><i class="icofont-check mr-2"></i>International Drug Database</li>
@@ -47,14 +39,12 @@
 						<li><i class="icofont-check mr-2"></i>Critical Care Medicine Specialists</li>
 						<li><i class="icofont-check mr-2"></i>Emergency Assistance</li>
 					</ul>
-
-					<a href="appoinment.html" class="btn btn-main-2 btn-round-full">Make an Appoinment<i class="icofont-simple-right ml-2  "></i></a>
 				</div>
 			</div>
 
 			<div class="col-lg-4">
 				<div class="sidebar-widget schedule-widget mt-5">
-					<h5 class="mb-4">Time Schedule</h5>
+					<h5 class="mb-4">Jam Operasional</h5>
 
 					<ul class="list-unstyled">
 					  <li class="d-flex justify-content-between align-items-center">
@@ -80,4 +70,5 @@
 		</div>
 	</div>
 </section>
+
 @endsection
