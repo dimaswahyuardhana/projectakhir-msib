@@ -16,7 +16,7 @@
 						<button type="submit" class="btn btn-danger mb-2">Cari Rumah Sakit</button>
 					  </form>
 				</div>
-				
+
 			</div>
 		</div>
 
@@ -32,7 +32,7 @@
 				</div>
 				</a>
 			</div>
-			
+
 			<div class="col-lg-3 col-sm-6 ngezoom">
 				<a href="{{('/hospital')}}">
 				<div class="department-block mb-4 shadow bg-white rounded p-3">

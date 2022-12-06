@@ -37,15 +37,32 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Jumlah Obat</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="jumlah_obat"
+                                    placeholder="Masukkan Jumlah Obat" value="{{ old('jumlah_obat') }}" />
+                            </div>
                         </div>
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Dokter</label>
                             <div class="col-sm-10">
                                 <select name="dokter_id" id="" class="form-control">
-                                    <option disabled selected>-- Pilih Obat --</option>
+                                    <option disabled selected>-- Dokter Penangan --</option>
                                     @foreach ($dokter as $dokter)
                                         <option value="{{ $dokter->id }}">{{ $dokter->nama }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Pasien</label>
+                            <div class="col-sm-10">
+                                <select name="pasien_id" id="" class="form-control">
+                                    <option disabled selected>-- Nama Pasien --</option>
+                                    @foreach ($pasien as $pasien)
+                                        <option value="{{ $pasien->id }}">{{ $pasien->nama }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -54,7 +71,7 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Status</label>
                             <div class="col-sm-10">
                                 <select name="status" id="" class="form-control">
-                                    <option disabled selected>-- Pilih Obat --</option>
+                                    <option disabled selected>-- Status --</option>
                                     <option value="Pending">Pending</option>
                                     <option value="Ditebus">Ditebus</option>
                                 </select>

@@ -111,9 +111,9 @@
                                 <h3>Rp. 0</h3>
                               </div>
                         </div>
-                        
+
                     </div>
-                    
+
                     <a class="btn btn-md btn-danger btn-round-full float-right" href="{{('appoinment')}}" >Check-In<i class="icofont-simple-right ml-2  "></i></a>
                 </form>
             </div>

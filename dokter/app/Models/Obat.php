@@ -10,8 +10,9 @@ class Obat extends Model
     use HasFactory;
     protected $table = "obat";
     protected $fillable = [
-        'nama_obat', 'stok'
+        'nama_obat', 'stok', 'deskripsi', 'harga', 'foto'
     ];
+    public $timestamps = false;
 
     public function resep_obat()
     {

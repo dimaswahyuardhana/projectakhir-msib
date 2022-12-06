@@ -23,6 +23,9 @@
                             <th>NO</th>
                             <th>NAMA OBAT</th>
                             <th>STOK</th>
+                            <th>HARGA</th>
+                            <th>DESKRIPSI</th>
+                            <th>FOTO</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -32,6 +35,11 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $obats->nama_obat }}</td>
                                 <td>{{ $obats->stok }}</td>
+                                <td>{{ $obats->harga }}</td>
+                                <td>{{ $obats->deskripsi }}</td>
+                                <td>
+                                    <img src="{{ asset('storage/' . $obats->foto) }}" alt="foto-obat" width="50px">
+                                </td>
                                 <td style="width: 100px">
                                     <form action="{{ route('obat.destroy', ['obat' => $obats->id]) }}" method="post">
                                         @method('delete')

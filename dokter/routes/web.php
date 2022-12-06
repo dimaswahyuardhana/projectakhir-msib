@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,9 +27,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('landingpage.home');
-});
-Route::get('/home', function () {
     return view('landingpage.home');
 });
 Route::get('/about', function () {
@@ -55,11 +53,11 @@ Route::get('/info_detail', function () {
 Route::get('/doctor', function () {
     return view('landingpage.doctor');
 });
-Route::get('/hospital', function () {
-    return view('landingpage.hospital');
-});
 Route::get('/daftar_rs', function () {
     return view('landingpage.daftar_rs');
+});
+Route::get('/hospital', function () {
+    return view('landingpage.hospital');
 });
 Route::get('/obat', function () {
     return view('landingpage.obat');
@@ -89,6 +87,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // controller resep
     Route::resource('admin-resep', ResepController::class);
     Route::get('/resep-cetak-pdf', [ResepController::class, 'exportPdf'])->name('resep-pdf');
+
+    // controller user
+    Route::resource('admin-user', UserController::class);
+    Route::get('/downloadExcel/user', [UserController::class, 'exportExcel'])->name('download-excel-user');
 });
 
 

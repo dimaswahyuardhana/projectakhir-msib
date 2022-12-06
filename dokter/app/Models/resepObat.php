@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class resepObat extends Model
 {
     use HasFactory;
-    protected $table = "resep_obats";
+    protected $table = "resep_obat";
     protected $fillable = [
-        'keterangan', 'obat_id', 'dokter_id', 'status'
+        'obat_id', 'dokter_id', 'status',
+        'keterangan', 'jumlah_obat', 'pasien_id'
     ];
 
     // relasi ke dokter
@@ -23,5 +24,11 @@ class resepObat extends Model
     public function obat()
     {
         return $this->belongsTo(Obat::class);
+    }
+
+    // relasi ke pasien
+    public function pasien()
+    {
+        return $this->belongsTo(Pasien::class);
     }
 }

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navigation" id="navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{ '/home' }}">
+        <a class="navbar-brand" href="{{ '/' }}">
             <img src="{{ url('images/logobaru.png') }}" alt="" class="img-fluid">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmain"
@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarmain">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="{{ url('/home') }}">Beranda</a></li>
+                <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">Beranda</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/about') }}">Tentang</a></li>
 
                 <li class="nav-item dropdown">

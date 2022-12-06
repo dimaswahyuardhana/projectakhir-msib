@@ -42,13 +42,20 @@ class ObatController extends Controller
             [
                 'nama_obat' => 'required',
                 'stok' => 'numeric',
+                'harga' => 'numeric',
+                'deskripsi' => 'required',
+                'foto' => ['required', 'image']
             ]
         );
 
-        $data = [
-            'nama_obat' => $request->nama_obat,
-            'stok' => $request->stok
-        ];
+        $data = $request->all();
+
+        if ($request->has('foto')) {
+            $foto = $request->file('foto')->store('obat/img', 'public');
+            $data['foto'] = $foto;
+        } else {
+            unset($data['foto']);
+        }
 
         Obat::create($data);
         return redirect()->route('obat.index')->with('success', 'Berhasil menambah data obat');

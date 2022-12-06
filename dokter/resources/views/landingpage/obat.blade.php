@@ -67,7 +67,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Paracetamol</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Vitamin</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Mixalgin</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Asamefenamat</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -123,7 +123,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Mefenamic Acid</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Ibuproven</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>ACE Inhibitor</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Kortikosteroid</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>Thypogell</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -195,7 +195,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>diazepam</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>
@@ -209,7 +209,7 @@
                         </div>
                         <div class="content mt-3">
                             <h3>lorazepam</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{url( '/detail_obat') }}">Detail</a></h5>
+                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
                         </div>
                     </div>
                 </div>

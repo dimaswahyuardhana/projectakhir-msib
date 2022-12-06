@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Obat;
 use App\Models\Dokter;
+use App\Models\Pasien;
 use App\Models\resepObat;
 use Illuminate\Http\Request;
 use PDF;
@@ -31,7 +32,8 @@ class ResepController extends Controller
     {
         $obat = Obat::all();
         $dokter = Dokter::all();
-        return view('admin.resep.create', compact('obat', 'dokter'));
+        $pasien = Pasien::all();
+        return view('admin.resep.create', compact('obat', 'dokter', 'pasien'));
     }
 
     /**
@@ -47,6 +49,8 @@ class ResepController extends Controller
                 'keterangan' => 'required',
                 'obat_id' => 'required',
                 'dokter_id' => 'required',
+                'jumlah_obat' => 'required',
+                'pasien_id' => 'required'
             ]
         );
 
@@ -54,6 +58,8 @@ class ResepController extends Controller
             'keterangan' => $request->keterangan,
             'obat_id' => $request->obat_id,
             'dokter_id' => $request->dokter_id,
+            'jumlah_obat' => $request->jumlah_obat,
+            'pasien_id' => $request->pasien_id,
             'status' => $request->status
         ];
 

@@ -18,7 +18,7 @@
                     <small class="text-muted float-end">Default label</small>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('obat.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('obat.store') }}">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Nama</label>
@@ -38,38 +38,6 @@
                                 @error('stok')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Harga</label>
-                            <div class="col-sm-10">
-                                <input type="number" class="form-control" name="harga"
-                                    placeholder="Masukkan Jumlah harga" value="{{ old('harga') }}" />
-                                @error('harga')
-                                    <small class="text-danger">{{ $message }}</small>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Deskripsi</label>
-                            <div class="col-sm-10">
-                                <textarea name="deskripsi" id="" cols="30" class="form-control">{{ old('deskripsi') }}</textarea>
-                                @error('deskripsi')
-                                    <small class="text-danger">{{ $message }}</small>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Foto</label>
-                            <div class="col-sm-10">
-                                <input type="file" class="form-control" name="foto" placeholder="Upload Foto"
-                                    accept="image/*"
-                                    onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])" />
-                                @error('foto')
-                                    <small class="text-danger">{{ $message }}</small>
-                                @enderror
-                                <div class="mb-2"><img src="" id="foto" alt="" width="200">
-                                </div>
                             </div>
                         </div>
                         <div class="row justify-content-end">
