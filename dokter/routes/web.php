@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\Api\apiResepController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\ObatController;
@@ -98,3 +98,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route api
+Route::get('/resep', [apiResepController::class, 'index']);
+Route::get('/resep-detail/{id}', [apiResepController::class, 'getResep']);
