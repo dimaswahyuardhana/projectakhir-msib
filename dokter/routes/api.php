@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\apiResepController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// resep obat
+Route::get('/resepObat', [apiResepController::class, 'index']);
+Route::get('/resepObat/{id}', [apiResepController::class, 'getResep']);
+Route::post('resepObat', [apiResepController::class, 'store']);
+Route::put('resepObat/{resepObat}', [apiResepController::class, 'update']);
+Route::delete('resepObat/{resepObat}', [apiResepController::class, 'delete']);

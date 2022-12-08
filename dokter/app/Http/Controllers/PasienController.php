@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pasien;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class PasienController extends Controller
 {
@@ -13,7 +15,25 @@ class PasienController extends Controller
      */
     public function index()
     {
-        //
+        if (request()->ajax()) {
+            $query = Pasien::query();
+
+            return DataTables::of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                    <a href="' . route('admin-pasien.edit', $item->id) . '" class="btn btn-warning btn-sm">Edit</a>
+                    <form action="' . route('admin-pasien.destroy', $item->id) . '" class="d-inline" method="POST">
+                         <button class="btn btn-danger btn-sm">
+                            hapus
+                         </button>
+                        ' . method_field('delete') . csrf_field() . '
+                    </form>
+                    ';
+                })
+                ->rawColumns(['action'])
+                ->make();
+        }
+        return view('admin.pasien.index');
     }
 
     /**

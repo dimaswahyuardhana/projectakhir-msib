@@ -1,8 +1,10 @@
 <?php
+
 use App\Http\Controllers\Api\apiResepController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\ObatController;
+use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ResepController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -91,6 +93,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // controller user
     Route::resource('admin-user', UserController::class);
     Route::get('/downloadExcel/user', [UserController::class, 'exportExcel'])->name('download-excel-user');
+
+    // controller pasien
+    Route::resource('admin-pasien', PasienController::class);
 });
 
 
