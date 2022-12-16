@@ -80,6 +80,13 @@
                 <div data-i18n="Account Settings">Pasien</div>
             </a>
         </li>
+        <li class="menu-item">
+            <a href="{{ route('rumah-sakit') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-wallet'></i>
+                <div data-i18n="Account Settings">Rumah Saki</div>
+            </a>
+        </li>
+
         <!-- Forms & Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
         <li class="menu-item">

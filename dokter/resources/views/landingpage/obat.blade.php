@@ -10,10 +10,10 @@
                         <h1 class="text-capitalize mb-5 text-lg">Informasi Obat</h1>
 
                         <!-- <ul class="list-inline breadcumb-nav">
-                <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-                <li class="list-inline-item"><span class="text-white">/</span></li>
-                <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
-              </ul> -->
+                                                                <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                                                                <li class="list-inline-item"><span class="text-white">/</span></li>
+                                                                <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
+                                                              </ul> -->
                     </div>
                 </div>
             </div>
@@ -58,161 +58,28 @@
             </div>
 
             <div class="row shuffle-wrapper portfolio-gallery">
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat1&quot;,&quot;cat2&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/1.jpg') }}" alt="doctor-image" class="img-fluid w-100">
+                @foreach ($obats as $item)
+                    <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item"
+                        data-groups="[&quot;cat1&quot;,&quot;cat2&quot;]">
+                        <div class="position-relative doctor-inner-box">
+                            <div class="doctor-profile">
+                                <div class="doctor-img">
+                                    @if ($item->foto != null)
+                                        <img src="{{ asset('storage/' . $item->foto) }}"
+                                            alt="Foto_Dokter-.{{ $item->id }}" class="img-fluid w-70">
+                                    @else
+                                        <img src="" alt="doctor-image" class="img-fluid w-100">
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="content mt-3">
+                                <h3>{{ $item->nama_obat }}</h3>
+                                <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat') }}">Detail</a>
+                                </h5>
                             </div>
                         </div>
-                        <div class="content mt-3">
-                            <h3>Paracetamol</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat2&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/2.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Vitamin</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat3&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/3.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Mixalgin</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat3&quot;,&quot;cat4&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/4.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Asamefenamat</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat5&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/5.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Mefenamic Acid</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat6&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/6.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Ibuproven</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat4&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/7.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>ACE Inhibitor</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item"
-                    data-groups="[&quot;cat5&quot;,&quot;cat6&quot;,&quot;cat1&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/8.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Kortikosteroid</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item illustration" data-groups="[&quot;cat2&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/9.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>Thypogell</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item"
-                    data-groups="[&quot;cat5&quot;,&quot;cat6&quot;,&quot;cat1&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/10.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>diazepam</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item illustration" data-groups="[&quot;cat2&quot;]">
-                    <div class="position-relative doctor-inner-box">
-                        <div class="doctor-profile">
-                            <div class="doctor-img">
-                                <img src="{{ url('images/obat/11.jpg') }}" alt="doctor-image" class="img-fluid w-100">
-                            </div>
-                        </div>
-                        <div class="content mt-3">
-                            <h3>lorazepam</h3>
-                            <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat' )}}">Detail</a></h5>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

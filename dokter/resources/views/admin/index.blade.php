@@ -58,6 +58,7 @@
 
 @push('script')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         var lbl = [
             @foreach ($obats as $obat)

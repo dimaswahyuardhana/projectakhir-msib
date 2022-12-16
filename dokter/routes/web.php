@@ -3,10 +3,13 @@
 use App\Http\Controllers\Api\apiResepController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\Frontend\DokterController as FrontendDokterController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ResepController;
+use App\Http\Controllers\RsController;
 use App\Http\Controllers\UserController;
+use App\Models\Obat;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,9 +55,12 @@ Route::get('/info', function () {
 Route::get('/info_detail', function () {
     return view('landingpage.info_detail');
 });
-Route::get('/doctor', function () {
-    return view('landingpage.doctor');
-});
+// Route::get('/doctor', function () {
+//     return view('landingpage.doctor');
+// });
+
+Route::get('/doctor', [FrontendDokterController::class, 'index']);
+
 Route::get('/daftar_rs', function () {
     return view('landingpage.daftar_rs');
 });
@@ -62,7 +68,8 @@ Route::get('/hospital', function () {
     return view('landingpage.hospital');
 });
 Route::get('/obat', function () {
-    return view('landingpage.obat');
+    $obats = Obat::all();
+    return view('landingpage.obat', compact('obats'));
 });
 Route::get('/beli_obat', function () {
     return view('landingpage.beli_obat');
@@ -96,6 +103,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     // controller pasien
     Route::resource('admin-pasien', PasienController::class);
+
+    // controller RS
+    Route::get('/rumah-sakit', [RsController::class, 'index'])->name('rumah-sakit');
 });
 
 
