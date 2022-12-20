@@ -18,4 +18,14 @@ class Obat extends Model
     {
         return $this->hasMany(resepObat::class);
     }
+
+    public function cart()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    public function transactionObat()
+    {
+        return $this->hasOne(TransactionObat::class);
+    }
 }

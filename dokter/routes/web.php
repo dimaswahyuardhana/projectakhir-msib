@@ -3,7 +3,10 @@
 use App\Http\Controllers\Api\apiResepController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\DokterController as FrontendDokterController;
+use App\Http\Controllers\Frontend\ObatController as FrontendObatController;
+use App\Http\Controllers\Frontend\TransactionController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ResepController;
@@ -40,12 +43,8 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('landingpage.kontak');
 });
-Route::get('/detail_produk', function () {
-    return view('landingpage.detail_produk');
-});
-Route::get('/detail_obat', function () {
-    return view('landingpage.detail_obat');
-});
+
+
 Route::get('/appoinment', function () {
     return view('landingpage.appoinment');
 });
@@ -67,6 +66,8 @@ Route::get('/daftar_rs', function () {
 Route::get('/hospital', function () {
     return view('landingpage.hospital');
 });
+
+// obat
 Route::get('/obat', function () {
     $obats = Obat::all();
     return view('landingpage.obat', compact('obats'));
@@ -74,10 +75,18 @@ Route::get('/obat', function () {
 Route::get('/beli_obat', function () {
     return view('landingpage.beli_obat');
 });
-// Route::get('/contact',function(){
-//     return view('landingpage.login');
-// });
-//login belum ada
+Route::get('/detail_obat/{id}', [FrontendObatController::class, 'detail_obat']);
+
+Route::middleware(['auth'])->group(function () {
+    // cart
+    Route::get('/cart', [CartController::class, 'cart'])->name('cart');
+    Route::post('/cart/{id}', [FrontendObatController::class, 'cartAdd'])->name('cart-add');
+    Route::delete('/cart/{id}', [CartController::class, 'cartDelete'])->name('cart-delete');
+
+    // checkout
+    // Route::post('/pesan_obat', [CartController::class, 'pesan'])->name('pesan-obat');
+    Route::post('/checkout', [TransactionController::class, 'store'])->name('chekout');
+});
 
 
 Route::get('/login', function () {

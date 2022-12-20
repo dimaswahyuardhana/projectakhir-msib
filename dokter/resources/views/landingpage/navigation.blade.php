@@ -21,7 +21,7 @@
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="{{ url('/contact') }}">Kontak</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/detail_produk') }}" title="Detail Produk"><i
+                <li class="nav-item"><a class="nav-link" href="{{ url('/cart') }}" title="Detail Produk"><i
                             class="icofont-cart"></i></a></li>
                 @auth
                     @if (Auth::user()->roles == 'admin')

@@ -10,10 +10,10 @@
                         <h1 class="text-capitalize mb-5 text-lg">Informasi Obat</h1>
 
                         <!-- <ul class="list-inline breadcumb-nav">
-                                                                <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-                                                                <li class="list-inline-item"><span class="text-white">/</span></li>
-                                                                <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
-                                                              </ul> -->
+                                                                    <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                                                                    <li class="list-inline-item"><span class="text-white">/</span></li>
+                                                                    <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
+                                                                  </ul> -->
                     </div>
                 </div>
             </div>
@@ -74,7 +74,8 @@
                             </div>
                             <div class="content mt-3">
                                 <h3>{{ $item->nama_obat }}</h3>
-                                <h5 class="mb-0"><a class="btn btn-danger" href="{{ url('/detail_obat') }}">Detail</a>
+                                <h5 class="mb-0"><a class="btn btn-danger"
+                                        href="{{ url('/detail_obat', $item->id) }}">Detail</a>
                                 </h5>
                             </div>
                         </div>
