@@ -69,7 +69,7 @@
             <span class="menu-header-text">Transaction</span>
         </li>
         <li class="menu-item">
-            <a href="{{ route('dokter.index') }}" class="menu-link">
+            <a href="{{ route('admin-transaksi.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-wallet'></i>
                 <div data-i18n="Account Settings">Transaction</div>
             </a>
@@ -111,6 +111,12 @@
                     <a href="{{ route('admin-resep.index') }}" class="menu-link">
                         <i class="menu-icon tf-icons fa-solid fa-notes-medical"></i>
                         <div data-i18n="Horizontal Form">Resep Obat</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ route('admin-kamar.index') }}" class="menu-link">
+                        <i class="menu-icon tf-icons fa-solid fa-booth-curtain"></i>
+                        <div data-i18n="Horizontal Form">Kamar</div>
                     </a>
                 </li>
                 <li class="menu-item">

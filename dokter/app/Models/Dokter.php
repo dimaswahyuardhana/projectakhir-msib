@@ -20,4 +20,9 @@ class Dokter extends Model
     {
         return $this->hasMany(resepObat::class);
     }
+
+    public function checkin()
+    {
+        return $this->hasMany(CheckIn::class);
+    }
 }

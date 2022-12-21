@@ -62,9 +62,7 @@ class TransactionController extends Controller
             'customer_details' => [
                 'first_name' => $transaction->name,
                 'email' => $transaction->email
-            ],
-            'enabled_payments' => ['gopay', 'bank_transfer'],
-            'vtweb' => []
+            ]
         ];
 
         // payment proses

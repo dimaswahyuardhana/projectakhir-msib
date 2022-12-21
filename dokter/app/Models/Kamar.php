@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RumahSakit extends Model
+class Kamar extends Model
 {
     use HasFactory;
-    protected $table = 'rumah_sakit';
+    protected $table = 'kamar';
+    protected $fillable = ['nama_kamar', 'fasilitas'];
 
     public function checkin()
     {
-        return $this->hasOne(CheckIn::class);
+        return $this->hasMany(CheckIn::class);
     }
 }

@@ -6,11 +6,14 @@ use App\Http\Controllers\DokterController;
 use App\Http\Controllers\Frontend\CartController;
 use App\Http\Controllers\Frontend\DokterController as FrontendDokterController;
 use App\Http\Controllers\Frontend\ObatController as FrontendObatController;
+use App\Http\Controllers\Frontend\RsController as FrontendRsController;
 use App\Http\Controllers\Frontend\TransactionController;
+use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ResepController;
 use App\Http\Controllers\RsController;
+use App\Http\Controllers\TransactionController as AdminTransactionController;
 use App\Http\Controllers\UserController;
 use App\Models\Obat;
 use Illuminate\Support\Facades\Route;
@@ -44,28 +47,19 @@ Route::get('/contact', function () {
     return view('landingpage.kontak');
 });
 
-
-Route::get('/appoinment', function () {
-    return view('landingpage.appoinment');
-});
 Route::get('/info', function () {
     return view('landingpage.info');
 });
 Route::get('/info_detail', function () {
     return view('landingpage.info_detail');
 });
-// Route::get('/doctor', function () {
-//     return view('landingpage.doctor');
-// });
 
+// dokter
 Route::get('/doctor', [FrontendDokterController::class, 'index']);
 
-Route::get('/daftar_rs', function () {
-    return view('landingpage.daftar_rs');
-});
-Route::get('/hospital', function () {
-    return view('landingpage.hospital');
-});
+// rs
+Route::get('/daftar_rs', [FrontendRsController::class, 'index'])->name('daftar-rs');
+Route::get('/detail-rs/{id}', [FrontendRsController::class, 'detail'])->name('detail-rs');
 
 // obat
 Route::get('/obat', function () {
@@ -86,6 +80,14 @@ Route::middleware(['auth'])->group(function () {
     // checkout
     // Route::post('/pesan_obat', [CartController::class, 'pesan'])->name('pesan-obat');
     Route::post('/checkout', [TransactionController::class, 'store'])->name('chekout');
+
+    // rumah sakit
+    Route::get('/checkIn/{id}', [FrontendRsController::class, 'checkIn'])->name('form-check');
+    Route::post('/checkIn', [FrontendRsController::class, 'store'])->name('checkIn');
+
+    // Route::get('/appoinment', function () {
+    //     return view('landingpage.appoinment');
+    // });
 });
 
 
@@ -115,6 +117,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     // controller RS
     Route::get('/rumah-sakit', [RsController::class, 'index'])->name('rumah-sakit');
+
+    // controller Transaksi
+    Route::resource('admin-transaksi', AdminTransactionController::class);
+
+    // controller kamar
+    Route::resource('admin-kamar', KamarController::class);
 });
 
 

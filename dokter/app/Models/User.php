@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(TransactionObat::class);
     }
+
+    public function checkin()
+    {
+        return $this->hasMany(CheckIn::class);
+    }
 }

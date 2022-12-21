@@ -10,7 +10,7 @@ class Pasien extends Model
     use HasFactory;
     protected $table = "pasien";
     protected $fillable = [
-        'nama', 'alamat', 'gender', 'usia', 'tgl_lahir'
+        'nama', 'alamat', 'gender', 'tgl_lahir'
     ];
 
     public $timestamps = false;
