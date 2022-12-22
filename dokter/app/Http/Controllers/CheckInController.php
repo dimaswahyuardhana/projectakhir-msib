@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transaction;
+use App\Models\CheckIn;
 use Illuminate\Http\Request;
 
-class TransactionController extends Controller
+class CheckInController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $datas = Transaction::all();
-        return view('admin.transaksi.index', compact('datas'));
+        $datas = CheckIn::with(['kamar', 'dokter'])->get();
+        return view('admin.checkin.index', compact('datas'));
     }
 
     /**
@@ -58,8 +58,8 @@ class TransactionController extends Controller
      */
     public function edit($id)
     {
-        $data = Transaction::where('id', $id)->get();
-        return view('admin.transaksi.edit', compact('data'));
+        $data = CheckIn::findOrFail($id);
+        return view('admin.checkin.edit', compact('data'));
     }
 
     /**
@@ -74,8 +74,9 @@ class TransactionController extends Controller
         $data = [
             'status' => $request->status
         ];
-        Transaction::where('id', $id)->update($data);
-        return redirect()->route('admin-transaksi.index')->with('success', 'Berhasil update data transaksi');
+
+        CheckIn::where('id', $id)->update($data);
+        return redirect()->route('checkIn.index')->with('success', 'Berhasil update data transaksi checkIn');
     }
 
     /**

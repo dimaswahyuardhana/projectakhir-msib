@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\apiResepController;
+use App\Http\Controllers\CheckInController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\Frontend\CartController;
@@ -123,6 +124,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     // controller kamar
     Route::resource('admin-kamar', KamarController::class);
+
+    // controller checkIn
+    Route::resource('checkIn', CheckInController::class);
 });
 
 

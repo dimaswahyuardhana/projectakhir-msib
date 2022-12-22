@@ -24,8 +24,7 @@
                                 <th>NO</th>
                                 <th>NAMA</th>
                                 <th>EMAIL</th>
-                                <th>ALAMAT</th>
-                                <th>JENIS KELAMIN</th>
+                                <th>ROLES</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -67,15 +66,10 @@
                     {
                         data: 'email',
                         name: 'email',
-                        width: '10%'
                     },
                     {
-                        data: 'alamat',
-                        name: 'alamat'
-                    },
-                    {
-                        data: 'jenis_kelamin',
-                        name: 'jenis_kelamin'
+                        data: 'roles',
+                        name: 'roles',
                     },
                     {
                         data: 'action',

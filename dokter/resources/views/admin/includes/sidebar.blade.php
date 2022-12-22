@@ -71,7 +71,13 @@
         <li class="menu-item">
             <a href="{{ route('admin-transaksi.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-wallet'></i>
-                <div data-i18n="Account Settings">Transaction</div>
+                <div data-i18n="Account Settings">Transaction Obat</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="{{ route('checkIn.index') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-wallet'></i>
+                <div data-i18n="Account Settings">CheckIn Online</div>
             </a>
         </li>
         <li class="menu-item">

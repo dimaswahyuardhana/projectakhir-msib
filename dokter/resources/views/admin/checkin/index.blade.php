@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
-            <h5 class="card-header">Manajemen Transaksi</h5>
+            <h5 class="card-header">Manajemen Check-in Online</h5>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
                     <table class="table" id="data_user">
@@ -10,10 +10,13 @@
                             <tr>
                                 <th>NAMA</th>
                                 <th>ALAMAT</th>
-                                <th>EMAIL</th>
+                                <th>GENDER</th>
                                 <th>NO TELP</th>
-                                <th>PAYMENT</th>
-                                <th>TOTAL PRICE</th>
+                                <th>TGL LHR</th>
+                                <th>TGL CHECK-IN</th>
+                                <th>JAM CHECK-IN</th>
+                                <th>RS</th>
+                                <th>KODE</th>
                                 <th>STATUS</th>
                                 <th>Action</th>
                             </tr>
@@ -21,16 +24,18 @@
                         <tbody>
                             @foreach ($datas as $data)
                                 <tr>
-                                    <td>{{ $data->name }}</td>
-                                    <td>{{ $data->address }}</td>
-                                    <td>{{ $data->email }}</td>
+                                    <td>{{ $data->fullName }}</td>
+                                    <td>{{ $data->alamat }}</td>
+                                    <td>{{ $data->gender }}</td>
                                     <td>{{ $data->phone }}</td>
-                                    <td>{{ $data->payment }}</td>
-                                    <td>{{ $data->total_price }}</td>
+                                    <td>{{ $data->tgl_lahir }}</td>
+                                    <td>{{ $data->tgl_checkIn }}</td>
+                                    <td>{{ $data->jam_checkIn }}</td>
+                                    <td>{{ $data->rs->nama }}</td>
+                                    <td>{{ $data->kode }}</td>
                                     <td>{{ $data->status }}</td>
                                     <td>
-                                        <a href="{{ route('admin-transaksi.edit', $data->id) }}"
-                                            class="btn btn-warning btn-sm">
+                                        <a href="{{ route('checkIn.edit', $data->id) }}" class="btn btn-warning btn-sm">
                                             <i class="fas fa-pen"></i>
                                         </a>
                                     </td>

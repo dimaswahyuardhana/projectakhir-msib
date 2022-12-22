@@ -78,7 +78,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = User::findOrFail($id);
+        return view('admin.user.edit', compact('data'));
     }
 
     /**
@@ -90,7 +91,27 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate(
+            [
+                'name' => 'required',
+                'jenis_kelamin' => 'required',
+                'usia' => 'required',
+                'tgl_lahir' => 'required',
+                'alamat' => 'required'
+            ]
+        );
+
+        $data = [
+            'name' => $request->name,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'usia' => $request->usia,
+            'tgl_lahir' => $request->tgl_lahir,
+            'alamat' => $request->alamat,
+            'roles' => $request->roles
+        ];
+
+        User::where('id', $id)->update($data);
+        return redirect()->route('admin-user.index')->with('toast_success', 'Berhasil update data user');
     }
 
     /**
@@ -101,7 +122,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::where('id', $id)->delete();
+        return redirect()->route('admin-user.index')->with('success', 'Berhasil hapus data');
     }
 
     public function exportExcel(Request $request)

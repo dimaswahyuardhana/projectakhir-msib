@@ -8,9 +8,6 @@
                     <a href="{{ route('admin-kamar.create') }}" class="btn btn-tool">
                         <i class="fas fa-plus"></i> Add
                     </a>
-                    <a href="{{ route('download-excel') }}" class="btn btn-tool">
-                        <i class="fas fa-file-excel"></i>
-                    </a>
                 </div>
                 <table class="table">
                     <thead>

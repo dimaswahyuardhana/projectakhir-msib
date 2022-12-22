@@ -14,18 +14,14 @@
                         <a href="{{ route('admin-pasien.create') }}" class="btn btn-tool">
                             <i class="fas fa-plus"></i> Add
                         </a>
-                        <a href="#" class="btn btn-tool">
-                            <i class="fas fa-file-excel"></i>
-                        </a>
                     </div>
                     <table class="table" id="data_user">
                         <thead>
                             <tr>
-                                <th>NO</th>
+                                <th>ID</th>
                                 <th>NAMA</th>
                                 <th>ALAMAT</th>
                                 <th>GENDER</th>
-                                <th>USIA</th>
                                 <th>TANGGAL LAHIR</th>
                                 <th>Action</th>
                             </tr>
@@ -70,10 +66,6 @@
                     {
                         data: 'gender',
                         name: 'gender'
-                    },
-                    {
-                        data: 'usia',
-                        name: 'usia'
                     },
                     {
                         data: 'tgl_lahir',

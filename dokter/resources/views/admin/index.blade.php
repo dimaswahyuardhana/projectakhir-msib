@@ -2,7 +2,73 @@
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="row">
-            <div class="col-lg-12 mb-4 order-0">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transaksi Obat</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $transaksi }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <li class="fas fa-calendar fa-2x text-gray-300">
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Pasien</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $pasien }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <li class="fas fa-calendar fa-2x text-gray-300">
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Check-in Online</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $checkIn }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <li class="fas fa-calendar fa-2x text-gray-300">
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Kamar</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $kamar }}</div>
+                            </div>
+                            <div class="col-auto">
+                                <li class="fas fa-calendar fa-2x text-gray-300">
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{-- <div class="col-lg-12 mb-4 order-0">
                 <div class="card">
                     <div class="d-flex align-items-end row">
                         <div class="col-sm-7">
@@ -24,7 +90,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
             <!-- Stok Obat -->
             <div class="col-12 col-lg-6 order-2 order-md-3 order-lg-2 mb-4">
                 <div class="card">
@@ -51,8 +118,6 @@
             </div>
             <!--/ Jumlah dokter -->
         </div>
-
-    </div>
     </div>
 @endsection
 

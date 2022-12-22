@@ -43,7 +43,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.pasien.create');
     }
 
     /**
@@ -54,7 +54,16 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'gender' => 'required',
+            'tgl_lahir' => 'required'
+        ]);
+
+        $data = $request->all();
+        Pasien::create($data);
+        return redirect()->route('admin-pasien.index')->with('success', 'Berhasil menambah data pasien');
     }
 
     /**
@@ -65,7 +74,7 @@ class PasienController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
     }
 
     /**
@@ -76,7 +85,8 @@ class PasienController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Pasien::findOrFail($id);
+        return view('admin.pasien.edit', compact('data'));
     }
 
     /**
@@ -88,7 +98,21 @@ class PasienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'gender' => 'required',
+            'tgl_lahir' => 'required'
+        ]);
+
+        $data = [
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'gender' => $request->gender,
+            'tgl_lahir' => $request->tgl_lahir,
+        ];
+        Pasien::where('id', $id)->update($data);
+        return redirect()->route('admin-pasien.index')->with('success', 'Berhasil update data pasien');
     }
 
     /**

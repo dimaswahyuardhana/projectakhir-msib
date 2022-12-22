@@ -10,10 +10,10 @@
                         <h1 class="text-capitalize mb-5 text-lg">Informasi Obat</h1>
 
                         <!-- <ul class="list-inline breadcumb-nav">
-                                                                    <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-                                                                    <li class="list-inline-item"><span class="text-white">/</span></li>
-                                                                    <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
-                                                                  </ul> -->
+                                                                                    <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                                                                                    <li class="list-inline-item"><span class="text-white">/</span></li>
+                                                                                    <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
+                                                                                  </ul> -->
                     </div>
                 </div>
             </div>
@@ -28,32 +28,6 @@
                         <h2>Obat</h2>
                         <div class="divider mx-auto my-4"></div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-12 text-center  mb-5">
-                <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                    <label class="btn active ">
-                        <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Department
-                    </label>
-                    <label class="btn ">
-                        <input type="radio" name="shuffle-filter" value="cat1" />Obat
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat2" />Dental
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat3" />Neurology
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat4" />Medicine
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat5" />Pediatric
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="shuffle-filter" value="cat6" />Traumatology
-                    </label>
                 </div>
             </div>
 
@@ -91,10 +65,8 @@
                 <div class="col-lg-7">
                     <div class="cta-content">
                         <div class="divider mb-4"></div>
-                        <h2 class="mb-5 text-lg">We are pleased to offer you the <span class="title-color">chance to have
-                                the healthy</span></h2>
-                        <a href="appoinment.html" class="btn btn-main-2 btn-round-full">Get appoinment<i
-                                class="icofont-simple-right  ml-2"></i></a>
+                        <h2 class="mb-5 text-lg">Kami merawat kalian dengan sepenuh hati <span class="title-color">yang
+                                membuat anda cepat sembuh</span></h2>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,6 @@
                             <th>NAMA OBAT</th>
                             <th>STOK</th>
                             <th>HARGA</th>
-                            <th>DESKRIPSI</th>
                             <th>FOTO</th>
                             <th>Action</th>
                         </tr>
@@ -36,7 +35,6 @@
                                 <td>{{ $obats->nama_obat }}</td>
                                 <td>{{ $obats->stok }}</td>
                                 <td>{{ $obats->harga }}</td>
-                                <td>{{ $obats->deskripsi }}</td>
                                 <td>
                                     <img src="{{ asset('storage/' . $obats->foto) }}" alt="foto-obat" width="50px">
                                 </td>

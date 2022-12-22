@@ -5,35 +5,56 @@
         <div class="col-xxl">
             <div class="card mb-4">
                 <div class="card-header d-flex align-items-center justify-content-between">
-                    <h5 class="mb-0">Edit Data Obat : <b>{{ $obat->nama_obat }}</b></h5>
+                    <h5 class="mb-0">Edit Data Pasien : <b>{{ $data->nama }}</b></h5>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('obat.update', ['obat' => $obat->id]) }}" method="post">
+                    <form action="{{ route('admin-pasien.update', $data->id) }}" method="POST">
                         @csrf
-                        @method('put')
+                        @method('PUT')
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Nama</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="nama_obat" placeholder="Masukkan Nama obat"
-                                    value="{{ $obat->nama_obat }}" />
-                                @error('nama_obat')
+                                <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Obat"
+                                    value="{{ $data->nama }}" />
+                                @error('nama')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="basic-default-name">Stok</label>
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Alamat</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="stok" value="{{ $obat->stok }}"
-                                    placeholder="Masukkan Spesialis" />
-                                @error('stok')
+                                <input type="text" class="form-control" name="alamat"
+                                    placeholder="Masukkan Jumlah alamat" value="{{ $data->alamat }}" />
+                                @error('alamat')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
                         </div>
-                        <div class="card-footer">
-                            <a href="{{ route('obat.index') }}" class="btn btn-secondary">Back</a>
-                            <button type="submit" class="btn btn-primary float-right">Edit Data</button>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Gender</label>
+                            <div class="col-sm-10">
+                                <select name="gender" id="" class="form-control">
+                                    <option value="L"{{ $data->gender == 'L' ? 'selected' : '' }}>Laki-laki</option>
+                                    <option value="P" {{ $data->gender == 'P' ? 'selected' : '' }}>Perempuan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-name">Tanggal Lahir</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control" name="tgl_lahir"
+                                    placeholder="Masukkan Jumlah alamat" value="{{ $data->tgl_lahir }}" />
+                                @error('tgl_lahir')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="col-sm-10">
+                                <a href="{{ route('admin-pasien.index') }}" class="btn btn-secondary">Back</a>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
                         </div>
                     </form>
                 </div>

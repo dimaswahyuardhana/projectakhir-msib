@@ -8,11 +8,6 @@
             <h5 class="card-header">Daftar Rumah Sakit</h5>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
-                    <div class="card-tools">
-                        <a href="#" class="btn btn-tool">
-                            <i class="fas fa-file-excel"></i>
-                        </a>
-                    </div>
                     <table class="table" id="pasien">
                         <thead>
                             <tr>

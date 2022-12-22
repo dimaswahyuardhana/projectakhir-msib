@@ -11,8 +11,8 @@
                         <p class="mb-4 pr-5">Kumpulan informasi kesehatan terlengkap dan terpercaya, terdapat fitur pesan
                             obat, chat dokter, dan check-in RS dengan mudah dan tanpa ribetttt</p>
                         <!-- <div class="btn-container ">
-          <a href="{{ 'appoinment' }}" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
-         </div> -->
+              <a href="#" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
+             </div> -->
                     </div>
                 </div>
             </div>
