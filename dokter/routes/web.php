@@ -72,6 +72,9 @@ Route::get('/beli_obat', function () {
 });
 Route::get('/detail_obat/{id}', [FrontendObatController::class, 'detail_obat']);
 
+// sukses checkout
+Route::get('/success', [TransactionController::class, 'success']);
+
 Route::middleware(['auth'])->group(function () {
     // cart
     Route::get('/cart', [CartController::class, 'cart'])->name('cart');
@@ -85,10 +88,6 @@ Route::middleware(['auth'])->group(function () {
     // rumah sakit
     Route::get('/checkIn/{id}', [FrontendRsController::class, 'checkIn'])->name('form-check');
     Route::post('/checkIn', [FrontendRsController::class, 'store'])->name('checkIn');
-
-    // Route::get('/appoinment', function () {
-    //     return view('landingpage.appoinment');
-    // });
 });
 
 

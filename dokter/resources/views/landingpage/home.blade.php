@@ -11,8 +11,8 @@
                         <p class="mb-4 pr-5">Kumpulan informasi kesehatan terlengkap dan terpercaya, terdapat fitur pesan
                             obat, chat dokter, dan check-in RS dengan mudah dan tanpa ribetttt</p>
                         <!-- <div class="btn-container ">
-              <a href="#" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
-             </div> -->
+                  <a href="#" target="_blank" class="btn btn-main-2 btn-icon btn-round-full">Make appoinment <i class="icofont-simple-right ml-2  "></i></a>
+                 </div> -->
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                             <h4 class="mb-3">Chat Dokter</h4>
                             <p class="mb-4">Konsultasikan permasalahan kesehatan anda dengan chat 24 jam kepada dokter
                                 terbaik dari YUK SEHAT</p>
-                            <a class="btn btn-danger" href="{{ url('/doctor') }}">Chat Dokter</a>
+                            <a class="btn btn-danger" href="{{ url('/doctor') }}">Daftar Dokter</a>
 
                         </div>
                         <div class="feature-item mb-5 mb-lg-0">

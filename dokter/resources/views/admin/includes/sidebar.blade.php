@@ -89,7 +89,7 @@
         <li class="menu-item">
             <a href="{{ route('rumah-sakit') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-wallet'></i>
-                <div data-i18n="Account Settings">Rumah Saki</div>
+                <div data-i18n="Account Settings">Rumah Sakit</div>
             </a>
         </li>
 

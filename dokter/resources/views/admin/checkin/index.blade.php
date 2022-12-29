@@ -1,11 +1,14 @@
 @extends('admin.layout')
+@push('css')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"></script>
+@endpush
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
         <div class="card">
             <h5 class="card-header">Manajemen Check-in Online</h5>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">
-                    <table class="table" id="data_user">
+                    <table class="table" id="checkIn">
                         <thead>
                             <tr>
                                 <th>NAMA</th>
@@ -48,3 +51,10 @@
         </div>
     </div>
 @endsection
+@push('script')
+    <script>
+        $(document).ready(function() {
+            $('#checkIn').DataTable();
+        });
+    </script>
+@endpush

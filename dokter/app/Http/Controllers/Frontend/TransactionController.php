@@ -78,4 +78,21 @@ class TransactionController extends Controller
             echo $e->getMessage();
         }
     }
+
+    public function callback(Request $request)
+    {
+        $serverKey = config('services.midtrans.serverKey');
+        $hashed = hash('sha512', $request->order_id . $request->status_code . $request->gross_amount . $serverKey);
+        if ($hashed == $request->signature_key) {
+            if ($request->transaction_status == 'capture') {
+                $transaction = Transaction::findOrFail($request->order_id);
+                $transaction->update(['status' => 'SUCCESS']);
+            }
+        }
+    }
+
+    public function success()
+    {
+        return view('landingpage.successPay');
+    }
 }

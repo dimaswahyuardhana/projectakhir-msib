@@ -10,10 +10,10 @@
                         <h1 class="text-capitalize mb-5 text-lg">Specalized doctors</h1>
 
                         <!-- <ul class="list-inline breadcumb-nav">
-                                                    <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-                                                    <li class="list-inline-item"><span class="text-white">/</span></li>
-                                                    <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
-                                                  </ul> -->
+                                                                <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+                                                                <li class="list-inline-item"><span class="text-white">/</span></li>
+                                                                <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
+                                                              </ul> -->
                     </div>
                 </div>
             </div>
@@ -27,8 +27,9 @@
                     <div class="section-title">
                         <h2>Doctors</h2>
                         <div class="divider mx-auto my-4"></div>
-                        <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque,
-                            voluptate. Beatae officiis neque </p>
+                        <p>
+                            Daftar Dokter Terpercaya Di Indonesia Sesuai Dengan Spesialis
+                        </p>
                     </div>
                 </div>
             </div>
@@ -50,8 +51,8 @@
                                 </div>
                             </div>
                             <div class="content mt-3">
-                                <h4 class="mb-0"><a href="doctor-single.html">{{ $item->nama }}</a></h4>
-                                <p>{{ $item->keahlian }}</p>
+                                <h4 class="mb-2"><a href="doctor-single.html">{{ $item->nama }}</a></h4>
+                                <h5>Spesialis : {{ $item->keahlian }}</h5>
                             </div>
                         </div>
                     </div>
